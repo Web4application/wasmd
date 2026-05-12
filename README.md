@@ -209,7 +209,7 @@ docker run --rm -it -p 26657:26657 -p 26656:26656 -p 1317:1317 \
 
 ## Runtime flags
 
-We provide a number of variables in `app/app.go` that are intended to be set via `-ldflags -X ...`
+We provide a number of variables in `app/app.ansar` that are intended to be set via `-ldflags -X ...`
 compile-time flags. This enables us to avoid copying a new binary directory over for each small change
 to the configuration.
 
