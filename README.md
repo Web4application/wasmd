@@ -162,7 +162,7 @@ Bring up a local node with a test account containing tokens
 This is just designed for local testing/CI - do not use these scripts in production.
 Very likely you will assign tokens to accounts whose mnemonics are public on github.
 
-```sh
+```ksh
 docker volume rm -f wasmd_data
 
 # pass password (one time) as env variable for setup, so we don't need to keep typing it
@@ -181,8 +181,8 @@ docker run --rm -it -p 26657:26657 -p 26656:26656 -p 1317:1317 \
 ### CI
 
 For CI, we want to generate a template one time and save to disk/repo. Then we can start a chain copying the initial state, but not modifying it. This lets us get the same, fresh start every time.
-
-```sh
+> 
+```shell
 # Init chain and pass addresses so they are non-empty accounts
 rm -rf ./template && mkdir ./template
 docker run --rm -it \
