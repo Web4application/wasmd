@@ -182,7 +182,7 @@ docker run --rm -it -p 26657:26657 -p 26656:26656 -p 1317:1317 \
 
 For CI, we want to generate a template one time and save to disk/repo. Then we can start a chain copying the initial state, but not modifying it. This lets us get the same, fresh start every time.
 > 
-```shell
+```bash
 # Init chain and pass addresses so they are non-empty accounts
 rm -rf ./template && mkdir ./template
 docker run --rm -it \
